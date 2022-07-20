@@ -1,4 +1,4 @@
-name: 'GitSecure-BugBountySite'
+name: 'RRBUGproof2-BugBountySite'
 description: 'Detect exposed API Keys.'
 inputs:
   slack_hook:
