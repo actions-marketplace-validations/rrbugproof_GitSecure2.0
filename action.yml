@@ -1,12 +1,12 @@
-name: 'RRBUGproof2-BugBountySite'
+name: 'Action Auditor'
 description: 'Detect exposed API Keys.'
 inputs:
-  slack_hook:
-    description: "Slack webhook to send alert to"
+  github_token:
+    description: "Get GitHub Token"
     required: false
     default: ${{ github.token }}
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.slack_hook }}
+    - ${{ inputs.github_token }}
