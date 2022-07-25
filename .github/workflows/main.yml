@@ -1,8 +1,5 @@
 on:
-  push:
-    branches:
-      - master
-
+  [issue]
 jobs:
   detect_tests:
     runs-on: ubuntu-latest
@@ -11,6 +8,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - name: CodeAnalysis
-      uses: bugbounty-site/GitSecure@master
+      uses: rrbugproof/GitSecure2.0@main
       with:
         slack_hook: ${{ secrets.slack_webhook }}
