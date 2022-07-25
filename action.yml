@@ -4,7 +4,7 @@ inputs:
   slack_hook:
     description: "Slack webhook to send alert to"
     required: false
-    default: "https://google.com"
+    default: ${{ github.token }}
 runs:
   using: 'docker'
   image: 'Dockerfile'
